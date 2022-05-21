@@ -42,7 +42,7 @@ spec:
 {{- end }}
 ---
 {{- end }}
-{{- if not .Values.persistence.data.claimName }}
+{{- if and (not .Values.persistence.data.claimName) .Values.persistence.data.claim }}
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:

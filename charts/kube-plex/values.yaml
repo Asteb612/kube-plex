@@ -80,6 +80,8 @@ persistence:
     # Access mode for this volume
     accessMode: ReadWriteMany
   data:
+    # Optionaly disable PersistentVolumeClaim creation to use existing PVC.
+    claim: true
     # Optionally specify claimName to manually override the PVC to be used for
     # the data directory. If claimName is specified, storageClass and size are
     # ignored.
